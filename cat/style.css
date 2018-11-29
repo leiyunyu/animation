@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: #F6F7A7;
+}
+.cat{
+    position: relative;
+    top: 50px;
+}
+.mao{
+    width: 400px;
+    margin: 0 auto;
+}
+.mao_head{
+    width: 400px;
+    height: 340px;
+    margin: 0 auto;
+    position: relative;
+    background: #fff;
+    border:2px solid #2e2e2e;
+    border-radius: 50% 50% 35% 35%;
+    overflow: hidden;
+    z-index: 10;
+}
+.huawen{
+    position: absolute;
+    width: 160px;
+    height: 180px;
+    left: 110px;
+    background: #8D8D8D;
+    border-radius: 0 0 50% 50%;
+    overflow: hidden;
+}
+.huawen div:first-child{
+    width: 80px;
+    height: 180px;
+    background:#F0AC6B;
+}
+.mao_erduo{
+    width: 374px;
+    height: 120px;
+    position: absolute;
+    top: -6%;
+    left: 50%;
+    margin-left: -187px;
+    border-radius: 0% 0% 0% 0%;
+}
+.mao_erduo div:first-child{
+    width: 160px;
+    height: 200px;
+    background: #fff;
+    border:2px solid #2e2e2e;
+    border-radius: 4% 80% 0 50%;
+    transform: rotate(-15deg);
+    position: absolute;
+    top: 0;
+    left: -20px;
+    transition: transform 1s,left 1s;
+}
+.mao_erduo div:last-child{
+    width: 160px;
+    height: 180px;
+    background: #fff;
+    border:2px solid #2e2e2e;
+    border-radius: 80% 4% 50% 0;
+    transform: rotate(15deg);
+    position: absolute;
+    top: 0;
+    right: -20px;
+    transition: transform 1s,right 1s;
+}
+.cat:hover .mao_erduo div:first-child{
+    left: -10px;
+    transform: rotate(0deg);
+    border-radius: 4% 80% 0 60%;
+}
+.cat:hover .mao_erduo div:last-child{
+    right: -10px;
+    transform: rotate(0deg);
+    border-radius: 80% 4% 60% 0;
+}
+.mao_yanjing{
+    width: 300px;
+    height: 60px;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    margin-left: -150px;
+    z-index: 20;
+    overflow: hidden;
+}
+.mao_yanjing .yanquan{
+    width: 100px;
+    height: 100px;
+    border:2px solid #2e2e2e;
+    overflow: hidden;
+    position: absolute;
+    border-radius: 50%;
+}
+.mao_yanjing .yanquan div{
+    width: 30px;
+    height: 100px;
+    margin-left: 35px;
+    background: #2e2e2e;
+    transition: all 1s;
+}
+.cat:hover .mao_yanjing .yanquan div{
+    width: 40px;
+    margin-left: 30px;
+}
+.yanquan_dedding{
+    width: 180px;
+    height: 100px;
+    border:2px solid #2e2e2e;
+    margin-top: 50px;
+    margin-left: -40px;
+    position: absolute;
+    border-radius: 50%;
+    background: #fff;
+    transition: margin-top 1s;
+}
+.cat:hover .yanquan_dedding{
+    margin-top: 30px;
+}
+.hong{
+    
+}
+.right {
+    left: 196px;
+    top: 0px;
+    background: red;
+    position: absolute;
+}

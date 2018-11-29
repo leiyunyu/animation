@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- <div class="cat">
+        <div class="mao">
+            <div class="mao_head">
+                <div class="huawen">
+                    <div>
+                    </div>
+                </div>
+            </div>
+            <div class="mao_erduo">
+                <div></div>
+                <div></div>
+            </div>
+            <div class="mao_yanjing">
+                <div class="left">
+                    <div class="yanquan">
+                        <div></div>
+                    </div>
+                    <div class="yanquan_dedding"></div>
+                    <div class="hong"></div>
+                </div>
+                <div class="right">
+                    <div class="yanquan">
+                        <div></div>
+                    </div>
+                    <div class="yanquan_dedding"></div>
+                    <div class="hong"></div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <ul class="list"></ul>
+</body>
+<script>
+    window.onload = function() {
+        var listArr = [
+            {
+                index:0,
+                content:'我是第一'
+            },
+            {
+                index:1,
+                content:'我是第二'
+            },
+            {
+                index:2,
+                content:'我是第三'
+            },
+            {
+                index:3,
+                content:'我是第四'
+            },
+            {
+                index:4,
+                content:'我是第五'
+            },
+        ]
+        var list = document.getElementsByClassName('list')[0];
+        var html = '';
+        for(var i = 0; i < listArr.length; i++) {
+            html += `<li class="li">${listArr[i].content}    <button class="btn">向上</button></li>`
+        }
+        list.innerHTML = html;
+        console.log(listArr)
+        var lis = list.getElementsByClassName('btn')
+        for (let i = 0; i < lis.length; i ++) {
+            lis[i].onclick = function () {
+                console.log(i)
+                if(i === listArr.length) {
+                    alert('到顶了')
+                } else {
+                    listArr.push(listArr.shift())
+                }
+                console.log(listArr)
+            }
+        }
+    }
+</script>
+</html>
